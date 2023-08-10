@@ -1,0 +1,24 @@
+*{
+  margin: 0 auto;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.App {
+  text-align: center;
+  width: 50%;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.secrect-form {
+
+  height: 100%;
+  opacity: 0.67;
+  border-radius: 15px;
+  color: cadetblue;
+  font-family: fantasy;
+
+}
+
