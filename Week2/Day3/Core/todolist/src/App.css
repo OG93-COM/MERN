@@ -1,0 +1,36 @@
+*{
+  margin: 0 auto;
+}
+.mainApp{
+  background-image: url(../public/pattern-2.png);
+  width: 500px;
+  min-height: 200px;
+  border: 3px solid #dfdfdf;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 10px;
+
+}
+.App {
+  max-width: 400px;
+
+}
+.logo {
+  font-family: 'Grand Hotel',cursive;
+    font-size: 52px;
+    padding: 20px;
+    
+}
+.inputStyl{
+  width: 300px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.todo {
+  color: red;
+}
