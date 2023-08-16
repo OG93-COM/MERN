@@ -1,0 +1,13 @@
+*{
+  margin: 0 auto;
+}
+
+.App{
+  text-align: center;
+}
+.logo {
+  font-family: 'Grand Hotel',cursive;
+    font-size: 52px;
+    padding: 20px;
+    
+}
