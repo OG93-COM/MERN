@@ -1,17 +1,20 @@
 import { useState } from 'react';
 import './App.css';
-import { useEffect } from 'react';
 
 function App() {
-  const [pokeName,setPokeName] = useState("");
+  const [pokemon,setPokemon] = useState([]);
 
   
+  const addPoke = () => {
 
     fetch("https://pokeapi.co/api/v2/pokemon")
-    .then(response => {
-      return response.json()
-    }).then(response => {
-      console.log(response.results)
+    .then(res => {
+      
+      return res.json()
+
+    }).then(res => {
+      setPokemon(res.results)
+      
       
     })
     
@@ -19,15 +22,24 @@ function App() {
       console.log(err);
     })
 
+  }
+    
+
   
   
   
   return (
     <div className='App'>
       
-        <button type="button" className="btn btn-primary mt-3 mb-2">Fetch Pokemon</button>
+        <button type="button" className="btn btn-primary mt-3 mb-2" onClick={addPoke}>Fetch Pokemon</button>
         <ul className="list-group">
-          <li className="list-group-item">Pokemon Name</li>
+        {
+        pokemon.map( (pokeName,idx) => {
+            return (
+              <li key={idx} className="list-group-item mt-2">{idx+1} = {pokeName.name.toUpperCase()}</li>
+              )
+          } )}
+          
           
         </ul>
       
