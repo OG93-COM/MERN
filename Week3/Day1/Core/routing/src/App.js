@@ -12,8 +12,10 @@ function App() {
       <Link to="/Home">Home</Link>
       <Routes>
         <Route path="/Home" element={<Home/>}></Route>
-        
+
         <Route path="/:word" element={<ParamComponent/>} ></Route>
+
+        <Route path="/:word/:color/:backGroundColr" element={<ParamComponent/>} ></Route>
 
 
       </Routes>

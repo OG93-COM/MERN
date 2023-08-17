@@ -2,11 +2,11 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 
 const ParamComponent = (props) => {
-    const {word} = useParams()
+    const {word,color,backGroundColr} = useParams()
   return (
-    <div>ParamComponent
+    <div>
         { isNaN(word) ?
-            <p>This is Word: {word}</p> 
+            <p style={ color ? { color: color, backgroundColor: backGroundColr  } :null }> This is Word: {word}</p> 
             
         
         : 
