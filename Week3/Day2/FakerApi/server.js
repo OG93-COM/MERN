@@ -3,7 +3,7 @@ const faker = require("faker");
 const express = require("express");
 
 const app = express();
-const port = 8000;
+const port = 5000;
 
 const createUser = () => ({
   _id: faker.datatype.uuid(),
@@ -46,4 +46,4 @@ app.get("/api/user/company", (req, res) => {
   res.json(responseObject);
 });
 
-app.listen(port, () => console.log(`Express server running on port ${port}`));
+app.listen(port, () => console.log(`express server running on port ${port}`));
