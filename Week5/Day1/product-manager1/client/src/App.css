@@ -1,0 +1,15 @@
+*{
+  margin: 0 auto;
+}
+
+.App {
+  text-align: center;
+}
+
+.formCreate {
+  width: 500px;
+  background-color: #e9e9e9;
+  padding: 30px 50px;
+  border-radius: 10px;
+
+}
