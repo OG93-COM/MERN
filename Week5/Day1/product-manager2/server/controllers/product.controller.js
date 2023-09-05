@@ -7,13 +7,12 @@ module.exports.findAllProduct =(req,res)=>{
     .then(allProducts =>{
       console.log(allProducts)
       res.json({allProducts})
-
-    })
+     })
     .catch(err => { res.json({message: "Wait a minute😊"})})
 }
 
 // FindOne
-module.exports.findOne = (req,res) =>{
+module.exports.findOneProduct = (req,res) =>{
     Products.findOne({_id:req.params.id})
       .then((product)=>{
         console.log("This Product", product)

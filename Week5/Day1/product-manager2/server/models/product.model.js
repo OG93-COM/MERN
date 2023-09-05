@@ -5,7 +5,7 @@ const ProductSchema = new mongoose.Schema({
     title:{
         type:String,
         required:[ true, "the Title is required"],
-        minlength: [6, "Title must be at least 6 characters long"]
+        minlength: [3, "Title must be at least 3 characters long"]
     },
     price:{
         type:Number,
@@ -13,7 +13,8 @@ const ProductSchema = new mongoose.Schema({
     },
     description:{
         type:String,
-        required:[ true, "the Desciption is required"]
+        required:[ true, "the Desciption is required"],
+        minlength: [9, "Desciption must be at least 9 characters long"]
     }
 
 }, {timestamps:true});

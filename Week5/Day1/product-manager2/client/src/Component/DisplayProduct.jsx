@@ -1,35 +1,38 @@
-import React from 'react'
-import { useEffect } from 'react'
-import { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-const DisplayProduct = () => {
 
-    const [productList,setProductList] = useState()
+const DisplayProduct = (props) => {
 
-    useEffect(()=>{
+    const [productList,setProductList] = useState([])
+    const {refrechState} = props
+    
+
+    useEffect(()=> {
         axios.get("http://localhost:4500/api/products/")
         .then((res) => {
-            console.log(res)
-            setProductList(res.data)
+            console.log(res.data)
+            setProductList(res.data.allProducts)
         })
-        .catch((err) => {
-            console.log(err)
-        })
-    })
+        .catch((err) => { console.log(err) })
+    }, [refrechState])
 
   return (
 
 
-    <div>
-        
-        <h4>DisplayProduct</h4>
+    <div className="displayProd d-block mt-3">
+        <h4>Display</h4>
 
-        {productList.map((productTitle,idx) => (
-             <div key={idx}>{productTitle.title}</div>
-        )
+        {productList.map((productDisp,idx) => 
 
-            )}
+        {
+                return <div className=" alert alert-success" key={idx}>
+                    <Link to={"/api/products/" + productDisp._id}>{productDisp.title} </Link >
+                </div>
+
+            } )}
+     
     </div>
   )
 }

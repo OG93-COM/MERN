@@ -6,6 +6,7 @@ const FormProduct = (props) => {
     const [title, setTitle] = useState("");
     const [price, setPrice] = useState(0);
     const [description, setdescription] = useState("");
+    const { refresh } = props
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -20,6 +21,7 @@ const FormProduct = (props) => {
             setTitle("")        //Reset the status of title
             setPrice("")        //Reset the status of price
             setdescription("") //Reset the status of descr
+            refresh()
         })
         .catch((err) => {
             console.log(err)
