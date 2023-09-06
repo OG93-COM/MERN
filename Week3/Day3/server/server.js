@@ -10,7 +10,7 @@ app.use(cors(),express.json(),express.urlencoded({extended: true}))
 
 require("dotenv").config()
 require("./config/mongoose.config")
-require("./routes/product.route")(app)
+require("./routes/jokes.route")(app)
 
 
 
