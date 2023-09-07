@@ -1,0 +1,33 @@
+*{
+  margin: 0 auto;
+}
+
+.App {
+  text-align: center;
+  background-image: url("./assets/bg.avif");
+  min-height: 920px;
+}
+
+.content{
+  width: 500px;
+  background-color: #ffffffc9;
+  padding: 30px 50px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 50px;
+  
+
+}
+
+.App-header {
+  background-color: #282c34;
+  max-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.table{
+  max-width: 400px;
+}
