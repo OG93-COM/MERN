@@ -55,7 +55,7 @@ const DsiplayAuthors = () => {
                         <tr key={idx}>
                         <th scope="row">{authorDisplayName.authorName}</th>
                         <td>
-                        <Link to={"/edit/" + authorDisplayName._id}><button type="button" className="btn btn-primary ">Edit</button> </Link>
+                        <Link to={`/edit/${authorDisplayName._id}`}><button type="button" className="btn btn-primary">Edit</button></Link>
                             <button type="button" className="btn btn-primary ms-3" onClick={()=> deleteAuthor(authorDisplayName._id)}>Delete</button>
                         </td>
                         </tr>
