@@ -31,3 +31,10 @@
 .table{
   max-width: 400px;
 }
+
+.tableTitle {
+  color: #004f8f;
+  font-family: cursive;
+  font-size: x-large;
+  text-shadow : 0px 2px white;
+}

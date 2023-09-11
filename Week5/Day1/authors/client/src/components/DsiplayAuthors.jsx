@@ -44,8 +44,8 @@ const DsiplayAuthors = () => {
             <table className="table table-bordered table-striped">
                 <thead>
                     <tr>
-                    <th scope="col ms-3">Author</th>
-                    <th scope="col ms-3">Actions Available</th>
+                    <th scope="col ms-3"><span className="tableTitle">Author</span></th>
+                    <th scope="col ms-3"><span className="tableTitle">Actions Available</span></th>
                     </tr>
                 </thead>
                 <tbody>

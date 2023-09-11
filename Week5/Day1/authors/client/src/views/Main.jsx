@@ -10,10 +10,8 @@ const Main = () => {
 
   return (
     <div className='content'>
-        <h3>Home Page</h3>
-        <Link to={"/addAuthor/"}>Add New Author</Link>
+        <Link to={"/addAuthor/"}><button type="button" class="btn btn-outline-primary">Add New Author</button></Link>
         <DsiplayAuthors />
-
     </div>
   )
 }
